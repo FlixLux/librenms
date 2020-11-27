@@ -79,6 +79,8 @@ $rrd_def = RrdDefinition::make()
     ->addDataset('input_voltage', 'GAUGE', 0)
     ->addDataset('load', 'GAUGE', 0, 100);
 
+$remaining = (float) $remaining;
+
 $fields = [
     'charge' => $charge,
     'battery_low' => $battery_low,
