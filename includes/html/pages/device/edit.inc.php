@@ -19,7 +19,7 @@ if (! Auth::user()->hasGlobalAdmin()) {
         $panes['routing'] = 'Routing';
     }
 
-    if (count(\LibreNMS\Config::get("os.{$device['os']}.icons"))) {
+    if ((!is_null(\LibreNMS\Config::get("os.{$device['os']}.icons"))) && (count(\LibreNMS\Config::get("os.{$device['os']}.icons")))) {
         $panes['icon'] = 'Icon';
     }
 
